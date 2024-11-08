@@ -8,6 +8,72 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+header .mobile-content{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+header .bar{
+    background-color: #252b42; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    height: 58px; 
+    position: relative; 
+}
+
+
+.contact-info{
+    margin-left: 35px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.contact-info img{
+    padding-left: 15px;
+}
+
+.contact-info h6{
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+}
+
+.follow h6{
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 30px; 
+}
+
+.social-icons h6{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.social-icons img{
+    margin-left: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
 .Bandage{
     display: flex;
     flex-direction: row;
@@ -82,6 +148,12 @@ nav li{
     transition: background-color 0.3s;
 }
 
+
+#botao h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .container #none{
     padding-bottom: 0px;
 }
@@ -105,8 +177,6 @@ nav li{
 
 .product-of-the-week{
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
     flex-direction: column;
     column-gap: 30px;
     padding: 30px;
@@ -144,8 +214,8 @@ nav li{
 }
 
 .overlay button {
-    width: 198px;
-    height: 52px;
+    width: Hug(198px)px;
+    height: Hug(52px)px;
     margin-left:40px;
     background: #2D8BC0BF;
     color: #ffffff;
@@ -456,7 +526,7 @@ footer li{
     margin-top: 20px;
     border-radius: 5px 0px 0px 0px;
     border: 1px 0px 0px 0px;
-    opacity: 1;
+    opacity: 0px;
     text-indent: 20px;
 }
   
@@ -495,90 +565,32 @@ ul{
     list-style-type: none;
 }
 
-/* Media Query - Mobile (até 767px) */
-@media (max-width: 767px) {
-    .container {
-        padding: 20px 10px;
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
     }
 
-    .logos {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .logos img {
-        height: 40px;
-    }
-
-    .product-of-the-week {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .overlay {
-        padding: 15px;
-        font-size: 14px;
-    }
-
-    .featured-products h2 {
-        font-size: 24px;
-    }
-    
-    .img-container {
-        max-height: 200px;
-    }
-
-    /* Ajuste para melhorar espaçamento e alinhamento */
-    .Bandage {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 20px;
-    }
-}
-
-/* Media Query - Tablets (768px a 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        padding: 40px 20px;
-    }
-
-    .logos img {
-        height: 40px;
-    }
-
-    .product-of-the-week {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .featured-products h2 {
-        font-size: 30px;
-    }
-}
-
-/* Media Query - Desktop (acima de 1024px) */
-@media (min-width: 1024px) {
-    .Bandage {
+    main {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 50px;
-    }
-
-    .container {
-        padding: 60px 100px;
-    }
-
-    .logos img {
-        height: 60px;
-    }
-
-    .product-of-the-week {
-        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-    .featured-products h2 {
-        font-size: 36px;
+    main section {
+        flex: 1;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
     }
 }
+
+@media (min-width: 1024px) {
+    header, footer {
+        padding: 20px;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+}              
