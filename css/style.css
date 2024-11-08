@@ -47,8 +47,8 @@ nav li{
     /* background-color: #96e9fb; */
     background: linear-gradient(90deg, #96E9FB 0%, #ABECD6 100%);
     border-radius: 14px;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .container h5{
@@ -83,7 +83,7 @@ nav li{
 }
 
 .container #none{
-    padding: 0px;
+    padding-bottom: 0px;
 }
 
 .logos{
@@ -105,6 +105,8 @@ nav li{
 
 .product-of-the-week{
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     flex-direction: column;
     column-gap: 30px;
     padding: 30px;
@@ -115,7 +117,7 @@ nav li{
 
 .img-container{
     position: relative;
-    overflow: scroll;
+    overflow: hidden;
     display: block;
 }
 
@@ -142,8 +144,8 @@ nav li{
 }
 
 .overlay button {
-    width: Hug(198px)px;
-    height: Hug(52px)px;
+    width: 198px;
+    height: 52px;
     margin-left:40px;
     background: #2D8BC0BF;
     color: #ffffff;
@@ -330,7 +332,7 @@ nav li{
     margin-bottom: 60px;
 }
 
-.practice-advice{
+.practice-advice {
     margin-left: 30px;
 }
 
@@ -341,7 +343,8 @@ nav li{
 
 .label-container img{
     display: block;
-    height: auto;
+    height: 300px;
+    width: 367px;
 }
 
 #label {
@@ -453,7 +456,7 @@ footer li{
     margin-top: 20px;
     border-radius: 5px 0px 0px 0px;
     border: 1px 0px 0px 0px;
-    opacity: 0px;
+    opacity: 1;
     text-indent: 20px;
 }
   
@@ -479,7 +482,7 @@ footer p{
 }
 
 footer h6{
-    margin-top: 70px;
+    margin-top: 120px;
     margin-bottom: 30px;
     margin-right: 55px;
     text-align: center;
@@ -492,32 +495,90 @@ ul{
     list-style-type: none;
 }
 
-@media (min-width: 768px) {
-    body {
-        padding: 40px;
+/* Media Query - Mobile (até 767px) */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px 10px;
     }
 
-    main {
-        display: flex;
-        gap: 20px;
+    .logos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
-    main section {
-        flex: 1;
+    .logos img {
+        height: 40px;
     }
 
-    nav ul {
-        display: flex;
-        justify-content: center;
+    .product-of-the-week {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .overlay {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .featured-products h2 {
+        font-size: 24px;
+    }
+    
+    .img-container {
+        max-height: 200px;
+    }
+
+    /* Ajuste para melhorar espaçamento e alinhamento */
+    .Bandage {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
     }
 }
 
-@media (min-width: 1024px) {
-    header, footer {
-        padding: 20px;
+/* Media Query - Tablets (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 40px 20px;
     }
 
-    nav ul li {
-        margin: 0 15px;
+    .logos img {
+        height: 40px;
+    }
+
+    .product-of-the-week {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .featured-products h2 {
+        font-size: 30px;
+    }
+}
+
+/* Media Query - Desktop (acima de 1024px) */
+@media (min-width: 1024px) {
+    .Bandage {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .container {
+        padding: 60px 100px;
+    }
+
+    .logos img {
+        height: 60px;
+    }
+
+    .product-of-the-week {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .featured-products h2 {
+        font-size: 36px;
     }
 }
