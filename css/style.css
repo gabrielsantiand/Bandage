@@ -5,73 +5,19 @@
     padding: 0px;
     border: 0px;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 header .mobile-content{
     margin-left: 2px;
     margin-right: 2px;
-}
-
-header .bar{
-    background-color: #252b42; 
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between; 
-    align-items: center; 
-    /* width: 100%;
-    height: 58px;  */
-    position: relative; 
-}
-
-
-.contact-info{
-    margin-left: 35px;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.contact-info img{
-    padding-left: 15px;
-}
-
-.contact-info h6{
-    display: flex;
-    flex-direction: row;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 10px;
-}
-
-.follow h6{
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    margin-right: 30px; 
-}
-
-.social-icons h6{
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.social-icons img{
-    margin-left: 13px;
-    color: white;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    text-decoration: underline;
 }
 
 .Bandage{
@@ -92,6 +38,43 @@ header .bar{
 #vector img{
     padding-left: 10px;
 }
+
+.bar{
+    background: #252b42;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 200px;
+    height: 58px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.contact-info img{
+    padding-left: 25px;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    padding-right: 25px;
+}
+
+.social-icons h6{
+    margin-right: 5px;
+}
+
+.social-icons img{
+    margin-left: 15px;
+}
  
 nav .navigation{
     display: flex;
@@ -107,6 +90,39 @@ nav li{
     margin-top: 30px;
 }
 
+.destop-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.desktop-nav h3{
+    color: #252b42;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.desktop-nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.desktop-nav li{
+    color: #737373;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+li .login{
+    color: #23a6f0;
+}
+
+#shop{
+    color: #252b42;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
 .container{
     text-align: center;
     margin-top: 140px;
@@ -115,6 +131,8 @@ nav li{
     border-radius: 14px;
     margin-left: 12px;
     margin-right: 12px;
+    /* padding: 0 20px;
+    box-sizing: border-box; */
 }
 
 .container h5{
@@ -583,6 +601,15 @@ ul{
         display: flex;
         justify-content: center;
     }
+
+    .desktop-content{
+        display: block;
+    }
+
+    .mobile-content{
+        display: none;
+    }
+    
 }
 
 @media (min-width: 1024px) {
@@ -593,4 +620,5 @@ ul{
     nav ul li {
         margin: 0 15px;
     }
+
 }              
