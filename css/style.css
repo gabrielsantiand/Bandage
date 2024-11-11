@@ -12,6 +12,10 @@
     display: none;
 }
 
+.desktop-content-cards{
+    display: none;
+}
+
 body {
     background-color: #fff;
     max-width: 100%;
@@ -106,112 +110,9 @@ header .mobile-content{
     padding-left: 10px;
 }
 
-/* .bar{
-    background: #252b42;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 200px;
-    height: 58px;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.contact-info{
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-.contact-info img{
-    padding-left: 25px;
-}
-
-.social-icons{
-    display: flex;
-    flex-direction: row;
-    padding-right: 25px;
-}
-
-.social-icons h6{
-    margin-right: 5px;
-}
-
-.social-icons img{
-    margin-left: 15px;
-} */
-
-/* nav .navigation{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   
-    font-size: 30px;
-    text-align: center;
-    color: #737373;
-    margin-top: 50px;
-} */
-
 nav li{
     margin-top: 30px;
 }
-
-/* .desktop-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.desktop-content li{
-     display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-} 
-
-.desktop-nav h3{
-    color: #252b42;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.desktop-nav ul{
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-evenly;
-}
-
-.desktop-nav li{
-    color: #737373;
-    font-weight: 700;
-    font-size: 14px;
-     justify-content: space-evenly;
-}
- 
-ul, .login{
-    gap: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-li, #link{
-    color: #23a6f0;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-small{
-    color: #23a6f0;
-}
-
-
-#shop{
-    color: #252b42;
-    font-weight: 500;
-    margin-right: 5px;
-}  */
 
 .container{
     text-align: center;
@@ -347,6 +248,9 @@ small{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
 }
 
 .bestsellerproducts img{
@@ -354,6 +258,7 @@ small{
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 23px;
+    align-items: center;
 }
 
 .bestsellerproducts .design{
@@ -696,6 +601,10 @@ ul{
         display: none;
     }
 
+    #mobile-menu{
+        display: none;
+    }
+
     body {
         padding: 0%;
         margin: 0%;
@@ -707,14 +616,16 @@ ul{
         box-sizing: border-box;
         background-color: #fff;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         border-bottom: 1px solid #ddd;
     }
 
-    .desktop-content {
+    .desktop-content, .desktop-nav {
+        /* width: 1439px; */
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 40px;
     }
 
     .bar{
@@ -732,33 +643,6 @@ ul{
         padding: 0;
     }
     
-    .desktop-nav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-    
-    .desktop-nav ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .desktop-content li{
-        color: #737373;
-        font-weight: 700;
-        font-size: 14px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center; 
-        align-items: center;
-        gap: 30px;
-    } 
-
-
     .contact-info{
         display: flex;
         flex-direction: row;
@@ -783,11 +667,36 @@ ul{
         margin-left: 15px;
     }
 
+    .desktop-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .desktop-nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .desktop-content li{
+        color: #737373;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center;
+        gap: 30px;
+    } 
     
     .desktop-nav h3{
         color: #252b42;
         font-weight: 700;
         font-size: 24px;
+        margin-top: 30px;
     }
     
          
@@ -813,5 +722,27 @@ ul{
         color: #252b42;
         font-weight: 500;
         margin-right: 5px;
+        margin-top: 30px;
     } 
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    .product-of-the-week{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-of-the-week, .img-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .desktop-content-cards{
+        display: flex;
+        flex-direction: row;
+    }
 }
