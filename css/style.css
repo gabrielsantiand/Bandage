@@ -1,18 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    margin: 0;
-    /* overflow-x: hidden; */
+.desktop-content{
+    display: none;
+}
+
+body {
+    background-color: #fff;
     max-width: 100%;
-    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 768px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #252b42;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    max-width: 768px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 24px;
+    color: #737373;
+}
+
+/* Menu oculto */
+.hidden {
+    display: none;
+    font-weight: 400;
+}
+
+/* Menu visível */
+nav.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header .mobile-content{
@@ -450,6 +514,7 @@ small{
 .label-container{
     position: relative;
     display: inline-block;
+    margin-top: 20px;
 }
 
 .label-container img{
@@ -484,6 +549,10 @@ small{
     color: #8ec2f2;
 }
 
+.up-bar small{
+    color: #737373;
+}
+
 .arguments{
     margin-top: 10px;
     margin-left: 25px;
@@ -501,13 +570,18 @@ small{
 }
 
 #tokens{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 24px;
     display: flex;
     flex-direction: row;
     gap: 60px;
-    color: #737373;
+    /* color: #737373; */
     font-size: 15px;
+}
+
+#tokens small{
+    color: #737373;
+    padding-top: 13px;
 }
 
 #lear-more{
@@ -528,6 +602,11 @@ footer{
     
 }
 
+footer ul{
+    display: flex;
+    flex-direction: column;
+}
+
 footer h3{
     color: #252b42;
     font-size: 24px;
@@ -543,6 +622,7 @@ footer h5{
     color: #252b42;
     font-size: 16px;
     margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 footer li{
@@ -606,55 +686,119 @@ ul{
     list-style-type: none;
 }
 
-@media (min-width: 768px) {
-    body {
-        padding: 40px;
-        /* overflow: hidden; */
-    }
-
-    main {
-        display: flex;
-        gap: 20px;
-    }
-
-    main section {
-        flex: 1;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    .desktop-content{
-        display: block;
-    }
-
-    .mobile-content{
-        display: block;
-    }
-
-}
-
-@media (min-width: 1080px) {
-    body{
-        display: block;
-    }
-
-    header, footer {
-        padding: 20px;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    .mobile-content{
+/* desktop css */
+@media (min-width: 1024px) {
+    /* Exibir conteúdo da versão desktop e ocultar a versão mobile */
+    .header-content {
         display: none;
     }
 
-    .desktop-content{
-        display: block;
+    .desktop-content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-}              
+    /* Layout do header para desktop */
+    header {
+        flex-direction: row;
+        padding: 20px 40px;
+        border-bottom: 1px solid #ddd;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .desktop-nav ul {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .desktop-nav li {
+        font-size: 16px;
+        color: #737373;
+        font-weight: 700;
+    }
+
+    /* Container principal */
+    .container {
+        margin: 60px auto;
+        max-width: 1200px;
+        padding: 40px;
+        text-align: center;
+    }
+
+    /* Cards de produtos */
+    .cards {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /* Melhorando o layout dos produtos em destaque */
+    .featured-products {
+        max-width: 1200px;
+        margin: 100px auto;
+        text-align: center;
+    }
+
+    .featured-products h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .bestsellerproducts .design {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /* Ajustes para o footer no desktop */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 60px auto 0;
+    }
+
+    footer ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    footer li {
+        margin-top: 0;
+    }
+    
+    /* Input de inscrição para newsletter */
+    .subscribe {
+        display: flex;
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .subscribe input[type="email"] {
+        width: 300px;
+        padding: 15px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .subscribe button {
+        padding: 15px 20px;
+        border-radius: 0 5px 5px 0;
+    }
+}
