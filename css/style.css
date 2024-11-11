@@ -117,12 +117,12 @@ nav li{
 .container{
     text-align: center;
     margin-top: 140px;
-     background-color: #96e9fb; 
+    background-color: #96e9fb; 
     background: linear-gradient(90deg, #96E9FB 0%, #ABECD6 100%);
     border-radius: 14px;
     margin-left: 12px;
-    margin-right: 12px;
-     padding: 0 20px;
+    margin-right: 13px;
+    padding: 0 20px;
     box-sizing: border-box; 
 }
 
@@ -635,7 +635,7 @@ ul{
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        gap: 345px;
+        gap: 436.5px;
         height: 58px;
         color: #FFFFFF;
         font-weight: 700;
@@ -672,13 +672,13 @@ ul{
         flex-direction: row;
         justify-content: space-between;
         margin-top: 20px;
+        gap: 30px;
     }
     
     .desktop-nav ul{
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        gap: 30px;
+        justify-content: space-around;
     }
 
     .desktop-content li{
@@ -687,7 +687,7 @@ ul{
         font-size: 14px;
         display: flex;
         flex-direction: row;
-        justify-content: center; 
+        justify-content: space-between; 
         align-items: center;
         gap: 30px;
     } 
@@ -742,7 +742,55 @@ ul{
     }
     
     .desktop-content-cards{
+        display: block;
+    }
+
+    .desktop-content-cards h4{
+        color: #737373;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .desktop-content-cards h3{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 24px;
+        color: #252b42;
+    }
+
+    .desktop-content-cards p{
+        margin-top: 20px;
+        color: #737373;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 0.2px;
+    }
+
+    .besteseller-desktop{
         display: flex;
         flex-direction: row;
     }
+
+    .besteseller-desktop img{
+        margin-top: 30px;
+        width: 183px;
+        height: 238px;
+    }
+
+    .besteseller-desktop, .design{
+        display: inline-block
+    }
+    
+    .load-more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
