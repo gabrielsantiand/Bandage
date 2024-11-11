@@ -10,7 +10,7 @@
 
 body{
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -75,7 +75,7 @@ header .mobile-content{
 .social-icons img{
     margin-left: 15px;
 }
- 
+
 nav .navigation{
     display: flex;
     flex-direction: column;
@@ -90,10 +90,18 @@ nav li{
     margin-top: 30px;
 }
 
-.destop-nav{
+.desktop-nav{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
 }
+
+.desktop-content li{
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+} 
 
 .desktop-nav h3{
     color: #252b42;
@@ -103,36 +111,51 @@ nav li{
 
 .desktop-nav ul{
     display: flex;
-    flex-direction: row;
-    gap: 5px;
+    flex-direction: row; 
+    justify-content: space-evenly;
 }
 
 .desktop-nav li{
     color: #737373;
     font-weight: 700;
     font-size: 14px;
+     justify-content: space-evenly;
+}
+ 
+ul, .login{
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-li .login{
+li, #link{
+    color: #23a6f0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+small{
     color: #23a6f0;
 }
+
 
 #shop{
     color: #252b42;
     font-weight: 500;
     margin-right: 5px;
-}
+} 
 
 .container{
     text-align: center;
     margin-top: 140px;
-    /* background-color: #96e9fb; */
+     background-color: #96e9fb; 
     background: linear-gradient(90deg, #96E9FB 0%, #ABECD6 100%);
     border-radius: 14px;
     margin-left: 12px;
     margin-right: 12px;
-    /* padding: 0 20px;
-    box-sizing: border-box; */
+     padding: 0 20px;
+    box-sizing: border-box; 
 }
 
 .container h5{
@@ -586,6 +609,7 @@ ul{
 @media (min-width: 768px) {
     body {
         padding: 40px;
+        /* overflow: hidden; */
     }
 
     main {
@@ -607,18 +631,30 @@ ul{
     }
 
     .mobile-content{
-        display: none;
+        display: block;
     }
-    
+
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
+    body{
+        display: block;
+    }
+
     header, footer {
         padding: 20px;
     }
 
     nav ul li {
         margin: 0 15px;
+    }
+
+    .mobile-content{
+        display: none;
+    }
+
+    .desktop-content{
+        display: block;
     }
 
 }              
